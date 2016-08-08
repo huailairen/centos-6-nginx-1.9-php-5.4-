@@ -1,0 +1,11 @@
+#!/bin/bash
+build="build"
+run="run"
+if [ "$1" = "${build}" ]; then 
+	docker build -t centos-php  .  
+	echo $1 
+fi
+
+if [ "$1" = "${run}" ]; then
+	docker run -it centos-php  /bin/bash
+fi
